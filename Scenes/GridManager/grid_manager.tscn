@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://cdkrae0xqdhns"]
+
+[ext_resource type="Script" uid="uid://bln0bo02luco3" path="res://Scenes/GridManager/grid_manager.gd" id="1_cc4bi"]
+[ext_resource type="Script" uid="uid://c7vigmth0w5v8" path="res://Scenes/GridManager/grid_visualizer.gd" id="1_rehjr"]
+
+[node name="GridManager" type="Node2D" unique_id=1528678251]
+script = ExtResource("1_cc4bi")
+
+[node name="GridVisualizer" type="Node2D" parent="." unique_id=2099418383]
+position = Vector2(576, 324)
+script = ExtResource("1_rehjr")

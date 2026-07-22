@@ -1,0 +1,110 @@
+[gd_scene format=3 uid="uid://drpti24h1ka68"]
+
+[ext_resource type="PackedScene" uid="uid://cdkrae0xqdhns" path="res://Scenes/GridManager/grid_manager.tscn" id="1_pghlq"]
+[ext_resource type="Theme" uid="uid://b3rq2jra78h3f" path="res://Assets/UI/player_menu_theme.tres" id="2_wtb72"]
+
+[node name="Core" type="Node" unique_id=1620356012]
+
+[node name="Background" type="ColorRect" parent="." unique_id=1633051090]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.10416604, 0.07454992, 0.1265539, 1)
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1544276855]
+anchor_mode = 0
+
+[node name="Enemies" type="Node2D" parent="." unique_id=666138478]
+
+[node name="GridManager" parent="." unique_id=1528678251 instance=ExtResource("1_pghlq")]
+
+[node name="Player" type="Node" parent="." unique_id=1094714517]
+
+[node name="UI" type="Control" parent="." unique_id=1915445029]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CountDown" type="Control" parent="UI" unique_id=2065055605]
+layout_mode = 1
+anchors_preset = 0
+offset_top = 135.0
+offset_right = 40.0
+offset_bottom = 175.0
+
+[node name="Label" type="Label" parent="UI/CountDown" unique_id=2027872925]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+theme_override_font_sizes/font_size = 116
+text = "10"
+
+[node name="PlayerMenu" type="Control" parent="UI" unique_id=156245489]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -20.0
+offset_top = -40.0
+offset_right = 20.0
+grow_horizontal = 2
+grow_vertical = 0
+theme = ExtResource("2_wtb72")
+
+[node name="MarginContainer" type="MarginContainer" parent="UI/PlayerMenu" unique_id=1756537555]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -492.5
+offset_top = -224.0
+offset_right = 492.5
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="BackGround" type="ColorRect" parent="UI/PlayerMenu/MarginContainer" unique_id=397494150]
+layout_mode = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Main" type="TabBar" parent="UI/PlayerMenu/MarginContainer" unique_id=864238660]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="UI/PlayerMenu/MarginContainer/Main" unique_id=2024012064]
+propagate_maximum_size = false
+layout_mode = 0
+offset_right = 1004.0
+offset_bottom = 189.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UI/PlayerMenu/MarginContainer/Main/HBoxContainer" unique_id=733017475]
+custom_minimum_size = Vector2(250, 0)
+custom_maximum_size = Vector2(250, -1)
+propagate_maximum_size = false
+layout_mode = 2
+
+[node name="Label" type="Label" parent="UI/PlayerMenu/MarginContainer/Main/HBoxContainer/VBoxContainer" unique_id=1693436511]
+propagate_maximum_size = true
+layout_mode = 2
+text = "FITE"
+
+[node name="Label2" type="Label" parent="UI/PlayerMenu/MarginContainer/Main/HBoxContainer/VBoxContainer" unique_id=705883181]
+layout_mode = 2
+text = "MAGI"
+
+[node name="Label3" type="Label" parent="UI/PlayerMenu/MarginContainer/Main/HBoxContainer/VBoxContainer" unique_id=983605015]
+layout_mode = 2
+text = "REST"
+
+[node name="Label4" type="Label" parent="UI/PlayerMenu/MarginContainer/Main/HBoxContainer" unique_id=1458571386]
+custom_maximum_size = Vector2(750, -1)
+layout_mode = 2
+text = "* To rest is to recover ones stamina it feels good to finally restdsf dsfsd dfg it feels so good to rest it feels so good to rest it feeels so good to rest it feels so good to"
+autowrap_mode = 2
