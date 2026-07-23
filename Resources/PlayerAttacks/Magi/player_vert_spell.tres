@@ -8,5 +8,6 @@ script = ExtResource("1_jw0sh")
 target_damage = Array[float]([1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0])
 name = "Split"
 description = "Cast a spell dealing X damage to the front two rows of enemies!"
+resolve_text = "You pretend like you didn't completely miss the middle row"
 target_icon = ExtResource("2_0n0je")
 metadata/_custom_type_script = "uid://bjgl5405pc6qh"

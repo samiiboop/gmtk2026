@@ -9,11 +9,13 @@ var countdown : float = 10
 
 signal update_countdown(total : float)
 # Keeps track of the count down and who's turn it is
-#signal player_turn
+
+signal player_turn
 
 signal player_action(action : PlayerAction)
-
+signal enemy_action
 signal enemy_turn
+
 signal enemies_spawn_request
 
 #signal enemy_resolve
@@ -44,24 +46,26 @@ func _on_player_action(action : PlayerAction):
 				action.effect(enemy, countdown)
 				break
 		
-	# We want to resolve before enemy turn
-	await get_tree().create_timer(0.4).timeout
-	enemy_turn.emit()
+
 
 
 
 func _enemy_action():
 	var enemy_list = enemy_manager.get_children()
-	# Next round condition
+	enemy_action.emit()
+	print("enemies turn")
 	for enemy in enemy_list:
-		# Debuggy enemy behavior i think it gets the point across
-		if enemy.grid_index >= 3 and enemy.grid_index <= 5:
-			countdown -= 0.5
-		if enemy.grid_index >= 6:
-			countdown -= 1
+		enemy.global_position.y += 10
+		var action = enemy.attacks.pick_random()
+		var damage = action.effect()
+		await get_tree().create_timer(0.3).timeout
+		countdown -= damage
+		enemy.global_position.y -= 10
 		$"../UI/CountDown/Label".text = str(countdown) # Change to signal later
-	
+
 	countdown -= 1
+	player_turn.emit()
+
 
 
 func spawn_next_wave():

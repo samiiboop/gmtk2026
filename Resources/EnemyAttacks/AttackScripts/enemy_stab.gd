@@ -1,5 +1,5 @@
-class_name EnemyStab extends EnemyAttack
+class_name EnemyStab extends EnemyAction
 
 
 func effect():
-	print("STAB STAB STAB")
+	return damage

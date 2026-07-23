@@ -1,7 +1,7 @@
 @abstract
-class_name EnemyAttack extends Resource
+class_name EnemyAction extends Resource
 
 @export var damage : float = 0
-
+@export var resolve_text : String
 @abstract
-func effect()
+func effect() -> float

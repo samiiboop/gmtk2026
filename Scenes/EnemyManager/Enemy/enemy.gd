@@ -5,7 +5,7 @@ class_name Enemy extends Node2D
 
 # base class for enemy
 @export var hp : float = 10
-@export var attacks : Array[EnemyAttack]
+@export var attacks : Array[EnemyAction]
 var grid_index : int
 
 func _ready() -> void:

@@ -8,5 +8,6 @@ script = ExtResource("1_e2l7x")
 target_damage = Array[float]([1.0, 0.0, 1.0, 0.0, 0.0, 0.0, 1.0, 0.0, 1.0])
 name = "Bolt"
 description = "Zap enemies with lightning"
+resolve_text = "Lightning flings at the enemies!"
 target_icon = ExtResource("2_hab4x")
 metadata/_custom_type_script = "uid://bjgl5405pc6qh"

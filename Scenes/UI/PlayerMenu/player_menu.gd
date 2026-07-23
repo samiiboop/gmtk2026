@@ -19,12 +19,15 @@ func open_fite_tab():
 func open_magi_tab():
 	tab_container.current_tab = 2
 
-func open_player_resolve_tab():
+func _open_player_resolve_tab(_player_action : PlayerAction):
 	tab_container.current_tab = 3
+
+func _open_enemy_resolve_tab():
+	tab_container.current_tab = 4
 
 func open_main_tab():
 	tab_container.current_tab = 0
 
 func _input(event: InputEvent) -> void:
-	if Input.is_action_just_pressed("cancel"):
+	if Input.is_action_just_pressed("cancel") and tab_container.current_tab < 3:
 		open_main_tab()

@@ -8,5 +8,6 @@ script = ExtResource("1_hadkd")
 target_damage = Array[float]([0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 5.0, 5.0, 5.0])
 name = "Slash"
 description = "Deals 10 damage to front row of enemies!"
+resolve_text = "You slash at the enemies!"
 target_icon = ExtResource("2_vlgat")
 metadata/_custom_type_script = "uid://bwpmjrpkiwsud"
