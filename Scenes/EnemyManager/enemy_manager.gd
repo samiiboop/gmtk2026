@@ -1,15 +1,18 @@
 extends Node2D
 
-@export var spawn_example : Array[PackedScene]
-
+var wave_index : int = 0
+@export var waves : Array[EnemyWave]
 
 func _spawn_enemies(grid : Array):
+	var wave = waves[wave_index].enemies
+	wave_index += 1
 	print("Attempting spawn")
-	for i in min(spawn_example.size(), grid.size()):
+	for i in min(wave.size(), grid.size()):
+		print(i, grid)
 		print("SPAWNING")
-		if !spawn_example[i]: continue
+		if !wave[i]: continue
 		
-		var to_spawn = spawn_example[i].instantiate()
+		var to_spawn = wave[i].instantiate()
 		to_spawn.grid_index = i
 
 		add_child(to_spawn)

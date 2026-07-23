@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="PlayerSpell" format=3 uid="uid://du3yu2fogveyx"]
+
+[ext_resource type="Script" uid="uid://bjgl5405pc6qh" path="res://Resources/PlayerAttacks/AttackScripts/player_spell.gd" id="1_jw0sh"]
+[ext_resource type="Texture2D" uid="uid://bqf6w6bb32c8y" path="res://Assets/Test/targetsides.png" id="2_0n0je"]
+
+[resource]
+script = ExtResource("1_jw0sh")
+target_damage = Array[float]([1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0])
+name = "Split"
+description = "Cast a spell dealing X damage to the front two rows of enemies!"
+target_icon = ExtResource("2_0n0je")
+metadata/_custom_type_script = "uid://bjgl5405pc6qh"

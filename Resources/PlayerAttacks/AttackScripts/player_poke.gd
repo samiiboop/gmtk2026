@@ -1,4 +1,4 @@
-class_name PlayerPoke extends PlayerAttack
+class_name PlayerPoke extends PlayerAction
 
 
 

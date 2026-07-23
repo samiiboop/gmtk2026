@@ -1,6 +1,9 @@
 [gd_scene format=3 uid="uid://b14l707hsg6tf"]
 
-[node name="EnemyTurn" type="TabBar" unique_id=1945041702]
+[ext_resource type="Script" uid="uid://c75332aylpsqq" path="res://Scenes/UI/PlayerMenu/TabContainer/PlayerResolve/player_resolve.gd" id="1_7rjrp"]
+
+[node name="ResolveTurn" type="TabBar" unique_id=1945041702]
+script = ExtResource("1_7rjrp")
 metadata/_tab_index = 1
 
 [node name="Label" type="Label" parent="." unique_id=291288971]
@@ -9,11 +12,13 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 8.5
-offset_top = -24.0
-offset_right = -16.5
-offset_bottom = -155.0
+offset_left = -4.5
+offset_top = -101.0
+offset_right = 644.5
+offset_bottom = -78.0
 grow_horizontal = 2
 grow_vertical = 2
 text = "Blah blah blah BRING THE PAIN sdfsd fds fsdaf ds sda fsd sda f   sdDAAds aS DAs daS"
 autowrap_mode = 2
+visible_characters = 0
+visible_ratio = 0.0

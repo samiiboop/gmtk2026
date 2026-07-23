@@ -1,13 +1,13 @@
 extends Node
 
 
-@export var available_attacks : Array[PlayerAttack] = []
-@export var available_magi : Array[PlayerAttack] = []
+@export var available_attacks : Array[PlayerAction] = []
+@export var available_magi : Array[PlayerAction] = []
 signal send_available_attacks(available_attack : Array)
 signal send_available_magi(available_magi : Array)
 
 
-func unlock_attack(resource : PlayerAttack):
+func unlock_attack(resource : PlayerAction):
 	pass
 
 func update_ui():

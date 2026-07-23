@@ -25,7 +25,7 @@ layout_mode = 2
 [node name="Magi" parent="HBoxContainer/VBoxContainer" unique_id=696247715 instance=ExtResource("2_q8mdr")]
 layout_mode = 2
 
-[node name="Label" parent="HBoxContainer/VBoxContainer/Magi" index="1" unique_id=1142566545]
+[node name="Label" parent="HBoxContainer/VBoxContainer/Magi/VBoxContainer/HBoxContainer" parent_id_path=PackedInt32Array(696247715, 877782123) index="1" unique_id=1142566545]
 text = "MAGI"
 
 [node name="Label4" type="Label" parent="HBoxContainer" unique_id=1427985546]

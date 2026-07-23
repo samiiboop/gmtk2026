@@ -1,7 +1,8 @@
 class_name MenuSelectElement extends Node
 
-@onready var select: TextureRect = $Select
-@onready var label: Label = $Label
+@onready var select: TextureRect = $VBoxContainer/HBoxContainer/Select
+@onready var label: Label = $VBoxContainer/HBoxContainer/Label
+@onready var recharge_bar: ProgressBar = $VBoxContainer/HBoxContainer2/RechargeBar
 
 var active : bool = false
 
@@ -10,6 +11,9 @@ signal element_focus_exited
 
 signal selected
 # Called when the node enters the scene tree for the first time.
+
+func disable_recharge_bar():
+	recharge_bar.visible = false
 
 func _ready() -> void:
 	element_focus_entered.connect(_on_focus_entered)

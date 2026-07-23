@@ -4,7 +4,7 @@ class_name Enemy extends Node2D
 
 
 # base class for enemy
-var hp : float = 10
+@export var hp : float = 10
 @export var attacks : Array[EnemyAttack]
 var grid_index : int
 

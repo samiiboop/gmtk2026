@@ -11,7 +11,7 @@ var grid = []
 
 # Signals
 signal grid_created(child_grid : Array) # We are actually just going to return the list of children under the visualizer
-
+signal pass_grid(grid : Array)
 
 func create_grid(width : int, height : int):
 	for y in height:
@@ -23,3 +23,6 @@ func create_grid(width : int, height : int):
 	grid_visualizer.create_visuals(grid)
 	print("EMIT")
 	grid_created.emit(grid_visualizer.get_children())
+
+func _enemy_request():
+	pass_grid.emit(grid_visualizer.get_children())

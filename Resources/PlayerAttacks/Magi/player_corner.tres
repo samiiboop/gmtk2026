@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="PlayerSpell" format=3 uid="uid://dhquvcbdxtvlr"]
+
+[ext_resource type="Script" uid="uid://bjgl5405pc6qh" path="res://Resources/PlayerAttacks/AttackScripts/player_spell.gd" id="1_e2l7x"]
+[ext_resource type="Texture2D" uid="uid://druj2oqvkd1rp" path="res://Assets/Test/targetcorners.png" id="2_hab4x"]
+
+[resource]
+script = ExtResource("1_e2l7x")
+target_damage = Array[float]([1.0, 0.0, 1.0, 0.0, 0.0, 0.0, 1.0, 0.0, 1.0])
+name = "Bolt"
+description = "Zap enemies with lightning"
+target_icon = ExtResource("2_hab4x")
+metadata/_custom_type_script = "uid://bjgl5405pc6qh"

@@ -1,10 +1,12 @@
 [gd_resource type="Resource" script_class="StandardAttack" format=3 uid="uid://b52krdi70a5kt"]
 
 [ext_resource type="Script" uid="uid://bwpmjrpkiwsud" path="res://Resources/PlayerAttacks/AttackScripts/player_standard_attack.gd" id="1_hadkd"]
+[ext_resource type="Texture2D" uid="uid://dgq3xtegwx3eg" path="res://Assets/Test/targetfront.png" id="2_vlgat"]
 
 [resource]
 script = ExtResource("1_hadkd")
 target_damage = Array[float]([0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 5.0, 5.0, 5.0])
 name = "Slash"
 description = "Deals 10 damage to front row of enemies!"
+target_icon = ExtResource("2_vlgat")
 metadata/_custom_type_script = "uid://bwpmjrpkiwsud"

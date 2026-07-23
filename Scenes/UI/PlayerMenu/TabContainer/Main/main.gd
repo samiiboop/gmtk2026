@@ -18,6 +18,7 @@ func _ready() -> void:
 		if element is MenuSelectElement:
 			selections.append(element)
 			element.element_focus_exited.emit()
+			element.disable_recharge_bar()
 	
 	selections[0].element_focus_entered.emit()
 

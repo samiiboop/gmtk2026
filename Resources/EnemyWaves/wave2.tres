@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="EnemyWave" format=3 uid="uid://ba1w4wcu127bm"]
+
+[ext_resource type="PackedScene" uid="uid://fvumspwqwmb2" path="res://Scenes/EnemyManager/Enemy/enemy.tscn" id="1_40se3"]
+[ext_resource type="Script" uid="uid://csputq8siqkpg" path="res://Resources/EnemyWaves/enemy_waves.gd" id="2_c4ppm"]
+[ext_resource type="PackedScene" uid="uid://csjg3gq3eiw8x" path="res://Scenes/EnemyManager/Enemy/Enemies/snake.tscn" id="2_kvn4v"]
+
+[resource]
+script = ExtResource("2_c4ppm")
+enemies = Array[PackedScene]([ExtResource("1_40se3"), ExtResource("2_kvn4v"), ExtResource("1_40se3"), null, ExtResource("1_40se3"), null, null, null, null])
+metadata/_custom_type_script = "uid://csputq8siqkpg"

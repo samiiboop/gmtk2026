@@ -5,7 +5,9 @@
 [ext_resource type="PackedScene" uid="uid://cdkrae0xqdhns" path="res://Scenes/GridManager/grid_manager.tscn" id="1_pghlq"]
 [ext_resource type="Script" uid="uid://burbpn530q62y" path="res://Scenes/TurnManager/turn_manager.gd" id="2_gl8j7"]
 [ext_resource type="Theme" uid="uid://b3rq2jra78h3f" path="res://Assets/UI/player_menu_theme.tres" id="2_wtb72"]
-[ext_resource type="PackedScene" uid="uid://fvumspwqwmb2" path="res://Scenes/EnemyManager/Enemy/enemy.tscn" id="3_gxbf5"]
+[ext_resource type="Script" uid="uid://csputq8siqkpg" path="res://Resources/EnemyWaves/enemy_waves.gd" id="3_2ixk7"]
+[ext_resource type="Resource" uid="uid://bb7mb5aulmumh" path="res://Resources/EnemyWaves/wave1.tres" id="4_4sffg"]
+[ext_resource type="Resource" uid="uid://ba1w4wcu127bm" path="res://Resources/EnemyWaves/wave2.tres" id="6_4sffg"]
 [ext_resource type="Script" uid="uid://d14g2828uel1t" path="res://Scenes/Player/player.gd" id="6_gbnb7"]
 [ext_resource type="Script" uid="uid://rhqw0lddmhd6" path="res://Resources/PlayerAttacks/AttackScripts/player_attack.gd" id="7_byey5"]
 [ext_resource type="PackedScene" uid="uid://cpa22btr13pr7" path="res://Scenes/UI/PlayerMenu/TabContainer/Main/main.tscn" id="7_cyfn3"]
@@ -14,6 +16,8 @@
 [ext_resource type="Resource" uid="uid://b52krdi70a5kt" path="res://Resources/PlayerAttacks/Fite/player_slash.tres" id="9_0ouq4"]
 [ext_resource type="Resource" uid="uid://kdtwj3cgkkwo" path="res://Resources/PlayerAttacks/Magi/player_spell.tres" id="10_0ouq4"]
 [ext_resource type="Script" uid="uid://cqaq0x68hdcld" path="res://Scenes/UI/PlayerMenu/player_menu.gd" id="10_txsdi"]
+[ext_resource type="Resource" uid="uid://du3yu2fogveyx" path="res://Resources/PlayerAttacks/Magi/player_vert_spell.tres" id="11_5cc8j"]
+[ext_resource type="Resource" uid="uid://dhquvcbdxtvlr" path="res://Resources/PlayerAttacks/Magi/player_corner.tres" id="12_fryo0"]
 [ext_resource type="PackedScene" uid="uid://d17y7c3ewn6u2" path="res://Scenes/UI/PlayerMenu/TabContainer/Fite/fite.tscn" id="12_x0cc3"]
 
 [node name="Core" type="Node" unique_id=1620356012]
@@ -35,14 +39,14 @@ anchor_mode = 0
 
 [node name="EnemyManager" type="Node2D" parent="." unique_id=666138478]
 script = ExtResource("1_lstiq")
-spawn_example = Array[PackedScene]([ExtResource("3_gxbf5"), null, null, ExtResource("3_gxbf5"), ExtResource("3_gxbf5"), null, null, ExtResource("3_gxbf5"), ExtResource("3_gxbf5")])
+waves = Array[ExtResource("3_2ixk7")]([ExtResource("4_4sffg"), ExtResource("6_4sffg")])
 
 [node name="GridManager" parent="." unique_id=1528678251 instance=ExtResource("1_pghlq")]
 
 [node name="Player" type="Node" parent="." unique_id=1094714517]
 script = ExtResource("6_gbnb7")
 available_attacks = Array[ExtResource("7_byey5")]([ExtResource("8_txsdi"), ExtResource("9_0ouq4")])
-available_magi = Array[ExtResource("7_byey5")]([ExtResource("10_0ouq4")])
+available_magi = Array[ExtResource("7_byey5")]([ExtResource("10_0ouq4"), ExtResource("11_5cc8j"), ExtResource("12_fryo0")])
 
 [node name="UI" type="Control" parent="." unique_id=1915445029]
 layout_mode = 3
@@ -111,7 +115,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-current_tab = 3
+current_tab = 1
 clip_tabs = false
 tabs_visible = false
 switch_on_drag_hover = false
@@ -122,7 +126,6 @@ visible = false
 layout_mode = 2
 
 [node name="Fite" parent="UI/PlayerMenu/MarginContainer/BackGround/TabContainer" unique_id=1165909905 instance=ExtResource("12_x0cc3")]
-visible = false
 layout_mode = 2
 
 [node name="Magi" parent="UI/PlayerMenu/MarginContainer/BackGround/TabContainer" unique_id=93049858 instance=ExtResource("12_x0cc3")]
@@ -131,6 +134,7 @@ layout_mode = 2
 metadata/_tab_index = 2
 
 [node name="PlayerResolve" parent="UI/PlayerMenu/MarginContainer/BackGround/TabContainer" unique_id=1945041702 instance=ExtResource("8_gbnb7")]
+visible = false
 layout_mode = 2
 metadata/_tab_index = 3
 

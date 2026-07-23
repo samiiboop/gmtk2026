@@ -13,9 +13,10 @@ extends Node
 func _ready() -> void:
 	signal_setup()
 	grid_manager.create_grid(3,3)
+	# methods
+	turn_manager.spawn_next_wave()
 
 func signal_setup():
-	grid_manager.grid_created.connect(enemy_manager._spawn_enemies)
 	
 	# player signals
 	player.send_available_attacks.connect(fite._set_available_attacks)
@@ -23,8 +24,13 @@ func signal_setup():
 	player.update_ui()
 	
 	# turn manager signals
-	turn_manager.player_resolve
+	#turn_manager.player_resolve
+	turn_manager.enemies_spawn_request.connect(grid_manager._enemy_request)
+	
+	# Grid signals
+	grid_manager.pass_grid.connect(enemy_manager._spawn_enemies)
 	
 	# UI signals
 	fite.action_selected.connect(turn_manager._on_player_action)
 	magi.action_selected.connect(turn_manager._on_player_action)
+	

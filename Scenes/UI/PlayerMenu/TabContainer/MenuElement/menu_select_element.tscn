@@ -3,16 +3,45 @@
 [ext_resource type="Script" uid="uid://b1ik8drlo8mq4" path="res://Scenes/UI/PlayerMenu/TabContainer/MenuElement/menu_select_element.gd" id="1_43ibd"]
 [ext_resource type="Texture2D" uid="uid://be8skip0y1sbd" path="res://Assets/Test/Select.png" id="2_1ifb2"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uay87"]
+bg_color = Color(0.1441699, 0.00024664603, 0.26427197, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xd87t"]
+bg_color = Color(0.8642914, 5.4869056e-06, 0.5576782, 1)
+
 [node name="MenuSelectElement" type="HBoxContainer" unique_id=1483763397]
 script = ExtResource("1_43ibd")
 
-[node name="Select" type="TextureRect" parent="." unique_id=1311715536]
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1881818890]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer" unique_id=877782123]
+layout_mode = 2
+
+[node name="Select" type="TextureRect" parent="VBoxContainer/HBoxContainer" unique_id=1311715536]
 custom_minimum_size = Vector2(30, 30)
 layout_mode = 2
 offset_transform_enabled = true
 texture = ExtResource("2_1ifb2")
 
-[node name="Label" type="Label" parent="." unique_id=1142566545]
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer" unique_id=1142566545]
 propagate_maximum_size = true
 layout_mode = 2
 text = "FITE"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer" unique_id=1878297033]
+layout_mode = 2
+
+[node name="Select" type="TextureRect" parent="VBoxContainer/HBoxContainer2" unique_id=1467613766]
+custom_minimum_size = Vector2(30, 30)
+layout_mode = 2
+offset_transform_enabled = true
+offset_transform_scale = Vector2(0, 0)
+texture = ExtResource("2_1ifb2")
+
+[node name="RechargeBar" type="ProgressBar" parent="VBoxContainer/HBoxContainer2" unique_id=412331750]
+custom_minimum_size = Vector2(70, 10)
+layout_mode = 2
+theme_override_styles/background = SubResource("StyleBoxFlat_uay87")
+theme_override_styles/fill = SubResource("StyleBoxFlat_xd87t")
+show_percentage = false
