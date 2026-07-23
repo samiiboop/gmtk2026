@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://fvumspwqwmb2"]
+
+[ext_resource type="Script" uid="uid://d4e88gfclmh2n" path="res://Scenes/EnemyManager/Enemy/enemy.gd" id="1_mw074"]
+[ext_resource type="Script" uid="uid://b7ctgdph2xn8" path="res://Resources/EnemyAttacks/AttackScripts/enemy_attack.gd" id="2_nvvbs"]
+[ext_resource type="Resource" uid="uid://bog6fekyh4bs1" path="res://Resources/EnemyAttacks/enemy_stab.tres" id="3_2t2r4"]
+[ext_resource type="Texture2D" uid="uid://bigjayxn1b0lr" path="res://Assets/Test/testguy.png" id="4_dmwl5"]
+
+[node name="Enemy" type="Node2D" unique_id=1569745871]
+z_index = 1
+script = ExtResource("1_mw074")
+attacks = Array[ExtResource("2_nvvbs")]([ExtResource("3_2t2r4")])
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=41921740]
+texture = ExtResource("4_dmwl5")

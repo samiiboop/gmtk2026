@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="EnemyStab" format=3 uid="uid://bog6fekyh4bs1"]
+
+[ext_resource type="Script" uid="uid://6pooh3aq4les" path="res://Resources/EnemyAttacks/AttackScripts/enemy_stab.gd" id="1_jsaui"]
+
+[resource]
+script = ExtResource("1_jsaui")
+damage = 0.5
+metadata/_custom_type_script = "uid://6pooh3aq4les"

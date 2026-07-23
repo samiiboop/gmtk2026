@@ -4,14 +4,14 @@ extends Node2D
 # enemies placed on it, it should have functions related to helping us get
 # an enemy at tiles we are hitting
 
-@export var grid = []
+var grid = []
+
+@onready var grid_visualizer: Node2D = $GridVisualizer
+
 
 # Signals
-signal grid_created
+signal grid_created(child_grid : Array) # We are actually just going to return the list of children under the visualizer
 
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	create_grid(3,3)
 
 func create_grid(width : int, height : int):
 	for y in height:
@@ -20,4 +20,6 @@ func create_grid(width : int, height : int):
 		grid.append(col)
 	
 	# DEBUG
-	$GridVisualizer.create_visuals(grid)
+	grid_visualizer.create_visuals(grid)
+	print("EMIT")
+	grid_created.emit(grid_visualizer.get_children())

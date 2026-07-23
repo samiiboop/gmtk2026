@@ -1,9 +1,14 @@
 [gd_scene format=3 uid="uid://drpti24h1ka68"]
 
+[ext_resource type="Script" uid="uid://druh2atgb45s7" path="res://Scenes/core.gd" id="1_gqdy1"]
+[ext_resource type="Script" uid="uid://4utriuccqe6b" path="res://Scenes/EnemyManager/enemy_manager.gd" id="1_lstiq"]
 [ext_resource type="PackedScene" uid="uid://cdkrae0xqdhns" path="res://Scenes/GridManager/grid_manager.tscn" id="1_pghlq"]
+[ext_resource type="Script" uid="uid://burbpn530q62y" path="res://Scenes/TurnManager/turn_manager.gd" id="2_gl8j7"]
 [ext_resource type="Theme" uid="uid://b3rq2jra78h3f" path="res://Assets/UI/player_menu_theme.tres" id="2_wtb72"]
+[ext_resource type="PackedScene" uid="uid://fvumspwqwmb2" path="res://Scenes/EnemyManager/Enemy/enemy.tscn" id="3_gxbf5"]
 
 [node name="Core" type="Node" unique_id=1620356012]
+script = ExtResource("1_gqdy1")
 
 [node name="Background" type="ColorRect" parent="." unique_id=1633051090]
 anchors_preset = 15
@@ -13,10 +18,15 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.10416604, 0.07454992, 0.1265539, 1)
 
+[node name="TurnManager" type="Node" parent="." unique_id=1929304734]
+script = ExtResource("2_gl8j7")
+
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1544276855]
 anchor_mode = 0
 
-[node name="Enemies" type="Node2D" parent="." unique_id=666138478]
+[node name="EnemyManager" type="Node2D" parent="." unique_id=666138478]
+script = ExtResource("1_lstiq")
+spawn_example = Array[PackedScene]([ExtResource("3_gxbf5"), null, ExtResource("3_gxbf5"), null, ExtResource("3_gxbf5"), null, ExtResource("3_gxbf5")])
 
 [node name="GridManager" parent="." unique_id=1528678251 instance=ExtResource("1_pghlq")]
 
@@ -29,18 +39,24 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 
 [node name="CountDown" type="Control" parent="UI" unique_id=2065055605]
 layout_mode = 1
-anchors_preset = 0
-offset_top = 135.0
-offset_right = 40.0
-offset_bottom = 175.0
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+grow_vertical = 2
 
 [node name="Label" type="Label" parent="UI/CountDown" unique_id=2027872925]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 23.0
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -79.0
+offset_right = 133.0
+offset_bottom = 79.0
+grow_vertical = 2
 theme_override_font_sizes/font_size = 116
 text = "10"
 
@@ -75,36 +91,72 @@ grow_vertical = 0
 layout_mode = 2
 color = Color(0, 0, 0, 1)
 
-[node name="Main" type="TabBar" parent="UI/PlayerMenu/MarginContainer" unique_id=864238660]
-layout_mode = 2
+[node name="TabContainer" type="TabContainer" parent="UI/PlayerMenu/MarginContainer/BackGround" unique_id=247910169]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+current_tab = 1
+clip_tabs = false
+tabs_visible = false
+switch_on_drag_hover = false
+tab_focus_mode = 0
 
-[node name="HBoxContainer" type="HBoxContainer" parent="UI/PlayerMenu/MarginContainer/Main" unique_id=2024012064]
+[node name="Main" type="TabBar" parent="UI/PlayerMenu/MarginContainer/BackGround/TabContainer" unique_id=864238660]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="UI/PlayerMenu/MarginContainer/BackGround/TabContainer/Main" unique_id=2024012064]
 propagate_maximum_size = false
 layout_mode = 0
 offset_right = 1004.0
 offset_bottom = 189.0
 
-[node name="VBoxContainer" type="VBoxContainer" parent="UI/PlayerMenu/MarginContainer/Main/HBoxContainer" unique_id=733017475]
+[node name="VBoxContainer" type="VBoxContainer" parent="UI/PlayerMenu/MarginContainer/BackGround/TabContainer/Main/HBoxContainer" unique_id=733017475]
 custom_minimum_size = Vector2(250, 0)
 custom_maximum_size = Vector2(250, -1)
 propagate_maximum_size = false
 layout_mode = 2
 
-[node name="Label" type="Label" parent="UI/PlayerMenu/MarginContainer/Main/HBoxContainer/VBoxContainer" unique_id=1693436511]
+[node name="Label" type="Label" parent="UI/PlayerMenu/MarginContainer/BackGround/TabContainer/Main/HBoxContainer/VBoxContainer" unique_id=1693436511]
 propagate_maximum_size = true
 layout_mode = 2
 text = "FITE"
 
-[node name="Label2" type="Label" parent="UI/PlayerMenu/MarginContainer/Main/HBoxContainer/VBoxContainer" unique_id=705883181]
+[node name="Label2" type="Label" parent="UI/PlayerMenu/MarginContainer/BackGround/TabContainer/Main/HBoxContainer/VBoxContainer" unique_id=705883181]
 layout_mode = 2
 text = "MAGI"
 
-[node name="Label3" type="Label" parent="UI/PlayerMenu/MarginContainer/Main/HBoxContainer/VBoxContainer" unique_id=983605015]
+[node name="Label3" type="Label" parent="UI/PlayerMenu/MarginContainer/BackGround/TabContainer/Main/HBoxContainer/VBoxContainer" unique_id=983605015]
 layout_mode = 2
 text = "REST"
 
-[node name="Label4" type="Label" parent="UI/PlayerMenu/MarginContainer/Main/HBoxContainer" unique_id=1458571386]
+[node name="Label4" type="Label" parent="UI/PlayerMenu/MarginContainer/BackGround/TabContainer/Main/HBoxContainer" unique_id=1458571386]
 custom_maximum_size = Vector2(750, -1)
 layout_mode = 2
 text = "* To rest is to recover ones stamina it feels good to finally restdsf dsfsd dfg it feels so good to rest it feels so good to rest it feeels so good to rest it feels so good to"
 autowrap_mode = 2
+
+[node name="EnemyTurn" type="TabBar" parent="UI/PlayerMenu/MarginContainer/BackGround/TabContainer" unique_id=538867524]
+layout_mode = 2
+metadata/_tab_index = 1
+
+[node name="Label" type="Label" parent="UI/PlayerMenu/MarginContainer/BackGround/TabContainer/EnemyTurn" unique_id=1270873121]
+custom_maximum_size = Vector2(960, 1000)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 8.5
+offset_top = -24.0
+offset_right = -16.5
+offset_bottom = -155.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Blah blah blah BRING THE PAIN sdfsd fds fsdaf ds sda fsd sda f   sdDAAds aS DAs daS"
+autowrap_mode = 2
+
+[editable path="GridManager"]
