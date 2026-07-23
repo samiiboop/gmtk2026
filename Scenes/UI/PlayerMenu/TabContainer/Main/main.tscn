@@ -1,0 +1,37 @@
+[gd_scene format=3 uid="uid://cpa22btr13pr7"]
+
+[ext_resource type="Script" uid="uid://c3ndt3prxkh02" path="res://Scenes/UI/PlayerMenu/TabContainer/Main/main.gd" id="1_6ylrg"]
+[ext_resource type="PackedScene" uid="uid://dt1u3vg0ojcdo" path="res://Scenes/UI/PlayerMenu/TabContainer/MenuElement/menu_select_element.tscn" id="2_q8mdr"]
+
+[node name="Main" type="TabBar" unique_id=1490988663]
+script = ExtResource("1_6ylrg")
+metadata/_tab_index = 0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=291744518]
+propagate_maximum_size = false
+layout_mode = 0
+offset_right = 1004.0
+offset_bottom = 189.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer" unique_id=1668023994]
+custom_minimum_size = Vector2(250, 0)
+custom_maximum_size = Vector2(250, -1)
+propagate_maximum_size = false
+layout_mode = 2
+
+[node name="Fite" parent="HBoxContainer/VBoxContainer" unique_id=1483763397 instance=ExtResource("2_q8mdr")]
+layout_mode = 2
+
+[node name="Magi" parent="HBoxContainer/VBoxContainer" unique_id=696247715 instance=ExtResource("2_q8mdr")]
+layout_mode = 2
+
+[node name="Label" parent="HBoxContainer/VBoxContainer/Magi" index="1" unique_id=1142566545]
+text = "MAGI"
+
+[node name="Label4" type="Label" parent="HBoxContainer" unique_id=1427985546]
+custom_maximum_size = Vector2(750, -1)
+layout_mode = 2
+text = "* To rest is to recover ones stamina it feels good to finally restdsf dsfsd dfg it feels so good to rest it feels so good to rest it feeels so good to rest it feels so good to"
+autowrap_mode = 2
+
+[editable path="HBoxContainer/VBoxContainer/Magi"]

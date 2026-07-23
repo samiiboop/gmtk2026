@@ -5,6 +5,11 @@
 [ext_resource type="Resource" uid="uid://bog6fekyh4bs1" path="res://Resources/EnemyAttacks/enemy_stab.tres" id="3_2t2r4"]
 [ext_resource type="Texture2D" uid="uid://bigjayxn1b0lr" path="res://Assets/Test/testguy.png" id="4_dmwl5"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ptub5"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5ft65"]
+bg_color = Color(0.8073656, 2.4065375e-07, 0.47201145, 1)
+
 [node name="Enemy" type="Node2D" unique_id=1569745871]
 z_index = 1
 script = ExtResource("1_mw074")
@@ -12,3 +17,14 @@ attacks = Array[ExtResource("2_nvvbs")]([ExtResource("3_2t2r4")])
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=41921740]
 texture = ExtResource("4_dmwl5")
+
+[node name="ProgressBar" type="ProgressBar" parent="." unique_id=2037545602]
+offset_left = -28.0
+offset_top = 42.0
+offset_right = 30.0
+offset_bottom = 50.0
+theme_override_styles/background = SubResource("StyleBoxFlat_ptub5")
+theme_override_styles/fill = SubResource("StyleBoxFlat_5ft65")
+max_value = 10.0
+value = 10.0
+show_percentage = false

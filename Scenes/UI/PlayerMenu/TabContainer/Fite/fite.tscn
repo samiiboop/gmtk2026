@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://d17y7c3ewn6u2"]
+
+[ext_resource type="Script" uid="uid://hxvfilytr3x3" path="res://Scenes/UI/PlayerMenu/TabContainer/Fite/fite.gd" id="1_3rlfu"]
+
+[node name="Fite" type="TabBar" unique_id=1165909905]
+script = ExtResource("1_3rlfu")
+metadata/_tab_index = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=1374608577]
+propagate_maximum_size = false
+layout_mode = 0
+offset_right = 1004.0
+offset_bottom = 189.0
+
+[node name="ScrollContainer" type="ScrollContainer" parent="HBoxContainer" unique_id=1893675528]
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 2
+horizontal_scroll_mode = 0
+vertical_scroll_mode = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer/ScrollContainer" unique_id=2029489818]
+custom_minimum_size = Vector2(250, 0)
+custom_maximum_size = Vector2(250, -1)
+propagate_maximum_size = false
+layout_mode = 2
+
+[node name="DescLabel" type="Label" parent="HBoxContainer" unique_id=901447827]
+custom_maximum_size = Vector2(750, -1)
+layout_mode = 2
+text = "Description goes here!"
+autowrap_mode = 2

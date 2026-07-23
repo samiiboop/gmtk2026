@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://dt1u3vg0ojcdo"]
+
+[ext_resource type="Script" uid="uid://b1ik8drlo8mq4" path="res://Scenes/UI/PlayerMenu/TabContainer/MenuElement/menu_select_element.gd" id="1_43ibd"]
+[ext_resource type="Texture2D" uid="uid://be8skip0y1sbd" path="res://Assets/Test/Select.png" id="2_1ifb2"]
+
+[node name="MenuSelectElement" type="HBoxContainer" unique_id=1483763397]
+script = ExtResource("1_43ibd")
+
+[node name="Select" type="TextureRect" parent="." unique_id=1311715536]
+custom_minimum_size = Vector2(30, 30)
+layout_mode = 2
+offset_transform_enabled = true
+texture = ExtResource("2_1ifb2")
+
+[node name="Label" type="Label" parent="." unique_id=1142566545]
+propagate_maximum_size = true
+layout_mode = 2
+text = "FITE"

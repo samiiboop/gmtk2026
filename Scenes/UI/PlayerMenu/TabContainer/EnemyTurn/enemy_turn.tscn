@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://b14l707hsg6tf"]
+
+[node name="EnemyTurn" type="TabBar" unique_id=1945041702]
+metadata/_tab_index = 1
+
+[node name="Label" type="Label" parent="." unique_id=291288971]
+custom_maximum_size = Vector2(960, 1000)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 8.5
+offset_top = -24.0
+offset_right = -16.5
+offset_bottom = -155.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Blah blah blah BRING THE PAIN sdfsd fds fsdaf ds sda fsd sda f   sdDAAds aS DAs daS"
+autowrap_mode = 2

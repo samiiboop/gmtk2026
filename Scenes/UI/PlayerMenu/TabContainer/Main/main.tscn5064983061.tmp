@@ -1,0 +1,57 @@
+[gd_scene format=3 uid="uid://cpa22btr13pr7"]
+
+[ext_resource type="Script" uid="uid://c3ndt3prxkh02" path="res://Scenes/UI/TabContainer/Main/main.gd" id="1_6ylrg"]
+[ext_resource type="Script" uid="uid://b1ik8drlo8mq4" path="res://Scenes/UI/TabContainer/MenuElement/menu_select_element.gd" id="1_8a2ag"]
+[ext_resource type="Texture2D" uid="uid://be8skip0y1sbd" path="res://Assets/Test/Select.png" id="1_b1ieo"]
+
+[node name="Main" type="TabBar" unique_id=1490988663]
+script = ExtResource("1_6ylrg")
+metadata/_tab_index = 0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=291744518]
+propagate_maximum_size = false
+layout_mode = 0
+offset_right = 1004.0
+offset_bottom = 189.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer" unique_id=1668023994]
+custom_minimum_size = Vector2(250, 0)
+custom_maximum_size = Vector2(250, -1)
+propagate_maximum_size = false
+layout_mode = 2
+
+[node name="Fite" type="HBoxContainer" parent="HBoxContainer/VBoxContainer" unique_id=1392531048]
+layout_mode = 2
+script = ExtResource("1_8a2ag")
+
+[node name="Select" type="TextureRect" parent="HBoxContainer/VBoxContainer/Fite" unique_id=2074816445]
+custom_minimum_size = Vector2(30, 30)
+layout_mode = 2
+offset_transform_enabled = true
+texture = ExtResource("1_b1ieo")
+
+[node name="Label" type="Label" parent="HBoxContainer/VBoxContainer/Fite" unique_id=88629794]
+propagate_maximum_size = true
+layout_mode = 2
+text = "FITE"
+
+[node name="Magi" type="HBoxContainer" parent="HBoxContainer/VBoxContainer" unique_id=367043433]
+layout_mode = 2
+script = ExtResource("1_8a2ag")
+
+[node name="Select" type="TextureRect" parent="HBoxContainer/VBoxContainer/Magi" unique_id=293036435]
+custom_minimum_size = Vector2(30, 30)
+layout_mode = 2
+offset_transform_enabled = true
+texture = ExtResource("1_b1ieo")
+
+[node name="Label" type="Label" parent="HBoxContainer/VBoxContainer/Magi" unique_id=1998059278]
+propagate_maximum_size = true
+layout_mode = 2
+text = "FITE"
+
+[node name="Label4" type="Label" parent="HBoxContainer" unique_id=1427985546]
+custom_maximum_size = Vector2(750, -1)
+layout_mode = 2
+text = "* To rest is to recover ones stamina it feels good to finally restdsf dsfsd dfg it feels so good to rest it feels so good to rest it feeels so good to rest it feels so good to"
+autowrap_mode = 2

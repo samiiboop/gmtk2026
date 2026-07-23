@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="PlayerPoke" format=3 uid="uid://cjiyog6cqgerm"]
+
+[ext_resource type="Script" uid="uid://ci8hexswsyc0k" path="res://Resources/PlayerAttacks/AttackScripts/player_poke.gd" id="1_p1hf4"]
+
+[resource]
+script = ExtResource("1_p1hf4")
+target_damage = Array[float]([0.0, 5.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0])
+name = "Poke"
+description = "Poke the enemy!"
+resolve_text = "Deals 5 damage to back center enemy!"
+metadata/_custom_type_script = "uid://ci8hexswsyc0k"
