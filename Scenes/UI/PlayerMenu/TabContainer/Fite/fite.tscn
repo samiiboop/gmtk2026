@@ -30,9 +30,10 @@ custom_minimum_size = Vector2(300, 300)
 layout_mode = 2
 texture = ExtResource("2_v88by")
 
-[node name="DescLabel" type="Label" parent="HBoxContainer" unique_id=901447827]
-custom_minimum_size = Vector2(345, 0)
+[node name="DescLabel" type="RichTextLabel" parent="HBoxContainer" unique_id=1153355107]
+custom_minimum_size = Vector2(320, 0)
 custom_maximum_size = Vector2(750, -1)
 layout_mode = 2
+bbcode_enabled = true
 text = "Description goes here!"
 autowrap_mode = 2

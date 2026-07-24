@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://dkwa5yyat01q0"]
+
+[ext_resource type="PackedScene" uid="uid://fvumspwqwmb2" path="res://Scenes/EnemyManager/Enemy/enemy.tscn" id="1_nblxd"]
+
+[node name="Enemy" unique_id=1569745871 instance=ExtResource("1_nblxd")]
+hp = 5.0

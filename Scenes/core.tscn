@@ -14,11 +14,12 @@
 [ext_resource type="PackedScene" uid="uid://b14l707hsg6tf" path="res://Scenes/UI/PlayerMenu/TabContainer/EnemyTurn/enemy_turn.tscn" id="8_gbnb7"]
 [ext_resource type="Resource" uid="uid://cjiyog6cqgerm" path="res://Resources/PlayerAttacks/Fite/player_poke.tres" id="8_txsdi"]
 [ext_resource type="Resource" uid="uid://b52krdi70a5kt" path="res://Resources/PlayerAttacks/Fite/player_slash.tres" id="9_0ouq4"]
-[ext_resource type="Resource" uid="uid://kdtwj3cgkkwo" path="res://Resources/PlayerAttacks/Magi/player_spell.tres" id="10_0ouq4"]
 [ext_resource type="Script" uid="uid://cqaq0x68hdcld" path="res://Scenes/UI/PlayerMenu/player_menu.gd" id="10_txsdi"]
 [ext_resource type="Resource" uid="uid://du3yu2fogveyx" path="res://Resources/PlayerAttacks/Magi/player_vert_spell.tres" id="11_5cc8j"]
+[ext_resource type="Resource" uid="uid://c63hm4772bg2l" path="res://Resources/PlayerAttacks/Fite/player_strike.tres" id="12_cmq30"]
 [ext_resource type="Resource" uid="uid://dhquvcbdxtvlr" path="res://Resources/PlayerAttacks/Magi/player_corner.tres" id="12_fryo0"]
 [ext_resource type="PackedScene" uid="uid://d17y7c3ewn6u2" path="res://Scenes/UI/PlayerMenu/TabContainer/Fite/fite.tscn" id="12_x0cc3"]
+[ext_resource type="Resource" uid="uid://gn28ows5nq71" path="res://Resources/PlayerAttacks/Magi/player_smite.tres" id="14_4sffg"]
 
 [node name="Core" type="Node" unique_id=1620356012]
 script = ExtResource("1_gqdy1")
@@ -45,8 +46,8 @@ waves = Array[ExtResource("3_2ixk7")]([ExtResource("4_4sffg"), ExtResource("6_4s
 
 [node name="Player" type="Node" parent="." unique_id=1094714517]
 script = ExtResource("6_gbnb7")
-available_attacks = Array[ExtResource("7_byey5")]([ExtResource("8_txsdi"), ExtResource("9_0ouq4")])
-available_magi = Array[ExtResource("7_byey5")]([ExtResource("10_0ouq4"), ExtResource("11_5cc8j"), ExtResource("12_fryo0")])
+available_attacks = Array[ExtResource("7_byey5")]([ExtResource("8_txsdi"), ExtResource("9_0ouq4"), ExtResource("12_cmq30")])
+available_magi = Array[ExtResource("7_byey5")]([ExtResource("11_5cc8j"), ExtResource("12_fryo0"), ExtResource("14_4sffg"), ExtResource("8_txsdi"), ExtResource("9_0ouq4"), ExtResource("12_cmq30")])
 
 [node name="UI" type="Control" parent="." unique_id=1915445029]
 layout_mode = 3
@@ -115,7 +116,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-current_tab = 1
+current_tab = 2
 clip_tabs = false
 tabs_visible = false
 switch_on_drag_hover = false
@@ -126,10 +127,10 @@ visible = false
 layout_mode = 2
 
 [node name="Fite" parent="UI/PlayerMenu/MarginContainer/BackGround/TabContainer" unique_id=1165909905 instance=ExtResource("12_x0cc3")]
+visible = false
 layout_mode = 2
 
 [node name="Magi" parent="UI/PlayerMenu/MarginContainer/BackGround/TabContainer" unique_id=93049858 instance=ExtResource("12_x0cc3")]
-visible = false
 layout_mode = 2
 metadata/_tab_index = 2
 

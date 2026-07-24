@@ -10,6 +10,7 @@ var grid_index : int
 
 func _ready() -> void:
 	progress_bar.max_value = hp
+	progress_bar.value = hp
 
 func deal_damage(damage : float):
 	print("YOUCH")

@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="PlayerSmite" format=3 uid="uid://gn28ows5nq71"]
+
+[ext_resource type="Script" uid="uid://dyejtt47k5wgp" path="res://Resources/PlayerAttacks/AttackScripts/player_smite.gd" id="1_vc53a"]
+[ext_resource type="Texture2D" uid="uid://t0kwrs04wviy" path="res://Assets/Test/targetbackrow.png" id="2_avb4q"]
+
+[resource]
+script = ExtResource("1_vc53a")
+target_damage = Array[float]([1.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0])
+name = "Smite"
+damage = 10
+cooldown = 3
+cooldown_recover = 2
+description = "Smite your enemies! Deals (10-X)*3 dmg"
+target_icon = ExtResource("2_avb4q")
+metadata/_custom_type_script = "uid://dyejtt47k5wgp"

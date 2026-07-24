@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://be8skip0y1sbd" path="res://Assets/Test/Select.png" id="2_1ifb2"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uay87"]
-bg_color = Color(0.1441699, 0.00024664603, 0.26427197, 1)
+bg_color = Color(0.39350924, 0.0016916033, 0.6569798, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xd87t"]
 bg_color = Color(0.8642914, 5.4869056e-06, 0.5576782, 1)

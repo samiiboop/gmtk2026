@@ -32,14 +32,18 @@ func signal_setup():
 	turn_manager.player_action.connect(player_menu._open_player_resolve_tab)
 	turn_manager.player_action.connect(player_resolve._resolve_player_action)
 	turn_manager.player_turn.connect(player_menu.open_main_tab)
-	
+	turn_manager.player_turn.connect(magi._check_cooldowns)
 	turn_manager.enemy_action.connect(player_menu._open_enemy_resolve_tab)
 	turn_manager.enemy_action.connect(enemy_resolve._resolve_enemy_action)
 	
 	# Grid signals
 	grid_manager.pass_grid.connect(enemy_manager._spawn_enemies)
 	
-	# UI signals
+	# UI signals 
 	fite.action_selected.connect(turn_manager._on_player_action)
+	fite.countdown_getter = turn_manager.get_countdown # callable
+	
 	magi.action_selected.connect(turn_manager._on_player_action)
+	magi.countdown_getter = turn_manager.get_countdown # callable
+	
 	player_resolve.player_action_resolved.connect(turn_manager._enemy_action)

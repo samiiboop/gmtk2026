@@ -7,6 +7,7 @@
 script = ExtResource("1_p1hf4")
 target_damage = Array[float]([0.0, 10.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0])
 name = "Poke"
+damage = 15
 description = "Poke the enemy!"
 resolve_text = "You poke the enemy!"
 target_icon = ExtResource("2_eou7y")

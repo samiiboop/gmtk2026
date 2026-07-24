@@ -1,4 +1,4 @@
-class_name MenuSelectElement extends Node
+class_name MenuSelectElement extends Control
 
 @onready var select: TextureRect = $VBoxContainer/HBoxContainer/Select
 @onready var label: Label = $VBoxContainer/HBoxContainer/Label
@@ -10,6 +10,10 @@ signal element_focus_entered
 signal element_focus_exited
 
 signal selected
+
+var cooldown : int
+var charge : int = -1
+var recovery_num : int
 # Called when the node enters the scene tree for the first time.
 
 func disable_recharge_bar():
@@ -34,8 +38,21 @@ func _on_focus_entered():
 func _on_focus_exited():
 	disable_selection()
 
+func regain_charge(countdown : float):
+	print("RECHARGING")
+	if cooldown <= countdown:
+		charge += 1
+		update_bar()
+
+func update_bar():
+	recharge_bar.value = charge
+
 func _input(event: InputEvent) -> void:
 	if not active: return
 	
 	if Input.is_action_just_pressed("accept"):
+		if charge <= cooldown and charge != -1: # Cant select if it isnt off cooldown
+			return
 		selected.emit()
+		if charge != -1 : charge = 0 # this is becoming spaghetti but oh well
+		update_bar()

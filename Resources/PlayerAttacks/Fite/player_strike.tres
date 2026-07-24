@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="StandardAttack" format=3 uid="uid://c63hm4772bg2l"]
+
+[ext_resource type="Script" uid="uid://bwpmjrpkiwsud" path="res://Resources/PlayerAttacks/AttackScripts/player_standard_attack.gd" id="1_vp2oc"]
+[ext_resource type="Texture2D" uid="uid://pu3tleoxddsf" path="res://Assets/Test/targetStrike.png" id="2_toyku"]
+
+[resource]
+script = ExtResource("1_vp2oc")
+target_damage = Array[float]([0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 1.0, 0.0])
+name = "Strike"
+damage = 5
+description = "Drive into the enmies ahead!"
+resolve_text = "You lunge your sword forward!"
+target_icon = ExtResource("2_toyku")
+metadata/_custom_type_script = "uid://bwpmjrpkiwsud"

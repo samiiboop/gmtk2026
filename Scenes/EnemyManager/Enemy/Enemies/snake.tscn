@@ -1,10 +1,19 @@
 [gd_scene format=3 uid="uid://csjg3gq3eiw8x"]
 
 [ext_resource type="PackedScene" uid="uid://fvumspwqwmb2" path="res://Scenes/EnemyManager/Enemy/enemy.tscn" id="1_1d1l7"]
+[ext_resource type="Script" uid="uid://b7ctgdph2xn8" path="res://Resources/EnemyAttacks/AttackScripts/enemy_attack.gd" id="2_ijks2"]
 [ext_resource type="Texture2D" uid="uid://ba5o3sutkhe6q" path="res://Assets/Test/testguy2.png" id="2_itc4l"]
+[ext_resource type="Script" uid="uid://6pooh3aq4les" path="res://Resources/EnemyAttacks/AttackScripts/enemy_stab.gd" id="3_ormk8"]
+
+[sub_resource type="Resource" id="Resource_m5i7v"]
+script = ExtResource("3_ormk8")
+damage = 0.5
+resolve_text = "The enemy lunges at you!"
+metadata/_custom_type_script = "uid://6pooh3aq4les"
 
 [node name="Enemy" unique_id=1569745871 instance=ExtResource("1_1d1l7")]
 hp = 20.0
+attacks = Array[ExtResource("2_ijks2")]([SubResource("Resource_m5i7v")])
 
 [node name="Sprite2D" parent="." index="0" unique_id=41921740]
 position = Vector2(0, -26.5)
